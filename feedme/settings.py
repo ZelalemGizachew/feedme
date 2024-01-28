@@ -107,22 +107,24 @@ DATABASES = {
         # "PORT": "3306"
 
         # DEFAULT
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db6.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db6.sqlite3',
     }
 }
 
-# DATABASES = {
-#   'default': {
-#     'ENGINE': 'django.db.backends.postgresql',
-#     'NAME': 'feedme',
-#     'USER': 'zelalemgizachew0x',
-#     'PASSWORD': '36daOpiKeQzH',
-#     'HOST': 'ep-damp-unit-a3p7ksz4.il-central-1.aws.neon.tech',
-#     'PORT': '5432',
-#     'OPTIONS': {'sslmode': 'require'},
-#   }
-# }
+# To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
+
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'feedme',
+    'USER': 'zelalemgizachew0x',
+    'PASSWORD': '6uPGInEhsyT1',
+    'HOST': 'ep-lingering-resonance-a3bxpy8l.il-central-1.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
+}
 
 # feedme
 # -bblv3afc^&kv(*$r+01faf9c
@@ -216,9 +218,6 @@ STATICFILES_DIRS = [
 
 SWAGGER_SETTINGS = {
    'SECURITY_DEFINITIONS': {
-      'Basic': {
-            'type': 'basic'
-      },
       'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
